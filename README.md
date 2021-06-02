@@ -8,7 +8,7 @@ TODO: Enter the playbook file.
 
 This document contains the following details:
 
-Description of the Topologu
+Description of the Topology
 Access Policies
 ELK Configuration
 
@@ -120,6 +120,9 @@ TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., inst
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 Note: The following image link needs to be updated. Replace docker_ps_output.png with the name of your screenshot image file.
+
+![ELK sebp elk761](https://user-images.githubusercontent.com/77369142/120469515-04264780-c3d5-11eb-9164-38f3e81560ef.JPG)
+
 
 
 Target Machines & Beats
