@@ -1,10 +1,10 @@
 The files in this repository were used to configure the network depicted below.
 
-
+![Azure_RedTeam_resource_group](https://user-images.githubusercontent.com/77369142/120471172-f671c180-c3d6-11eb-960c-c576ef53a360.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/Chad-Frickey/KU-Cybersecurity-Bootcamp/tree/master/Ansible
+
 This document contains the following details:
 
 Description of the Topology
@@ -61,8 +61,6 @@ Download and launch Docker container sebp/elk:761
 The following screenshot displays the result of running docker ps -a after successfully configuring the ELK instance.
 
 ![ELK sebp elk761](https://user-images.githubusercontent.com/77369142/120470855-9e3abf80-c3d6-11eb-807b-abd2e7a32a75.JPG)
-![Azure_RedTeam_resource_group](https://user-images.githubusercontent.com/77369142/120471048-cf1af480-c3d6-11eb-9ec5-f256d9d8bc8b.png)
-![Azure_RedTeam_resource_group](https://user-images.githubusercontent.com/77369142/120471172-f671c180-c3d6-11eb-960c-c576ef53a360.jpg)
 
 
 Target Machines & Beats
