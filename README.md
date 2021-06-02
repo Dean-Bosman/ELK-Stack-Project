@@ -22,7 +22,7 @@ Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly Responsive, in addition to restricting overload to the network.
 
-TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
+Load blncing mkes sure thr application will be extremely responsive and also restrics overloading the network.having the jump box prevents machines in the network beign exposed in the public domain.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 
@@ -51,7 +51,7 @@ Access Policies
 The machines on the internal network are not exposed to the public Internet.
 Only the Jump-Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-TODO: Add whitelisted IP addresses
+Personal IP address
 
 Machines within the network can only be accessed by SSH.
 
@@ -87,9 +87,11 @@ its a quick and easy set up.
 
 The playbook implements the following tasks:
 
-TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
-...
-...
+Install Docker
+Install python3-pip
+Install Docker module pip
+Use systemctl to use more memory
+Download and launch Docker container sebp/elk:761
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 ![ELK sebp elk761](https://user-images.githubusercontent.com/77369142/120470855-9e3abf80-c3d6-11eb-807b-abd2e7a32a75.JPG)
@@ -98,29 +100,31 @@ The following screenshot displays the result of running docker ps after successf
 Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-TODO: List the IP addresses of the machines you are monitoring
+Web-1, 10.0.0.5
+Web-2, 10.0.0.6
+Web-3, 10.0.0.8
 
 We have installed the following Beats on these machines:
 
-TODO: Specify which Beats you successfully installed
+Filebeat
+Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
-
+Filebeat collects system logs, which can be used to track system events, etc.
+Metricbeat collects system and service metric data, which we can use to see CPU usage, etc.
 
 Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-Copy the _____ file to _____.
-Update the _____ file to include...
-Run the playbook, and navigate to ____ to check that the installation worked as expected.
+Copy the roles_ file to /etc/ansible/roles.
+Update the Hosts file to include Webservers IP's and ELK Server IP
+Run the playbook, and navigate to http://[ELK-server-IP]:5601/app/kibana to check that the installation worked as expected.
 
-TODO: Answer the following questions to fill in the blanks:
+/etc/ansible/roles/filebeat-playbook.yml is the filebeat playbook. Copy it to /etc/ansible/[your_dir]/[your-playbook-name]
 
-Which file is the playbook? Where do you copy it?
-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-_Which URL do you navigate to in order to check that the ELK server is running?
+/etc/ansible/files/metricbeat-playbook.yml is the metricbeat playbook. Copy it to /etc/ansible/[your_dir]/[your-playbook-name]
 
-As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+update the /etc/ansible/hosts file. '[webservers]' and '[elk]' need to be updated with the IP of the web servers you want to run the playbooks on
+
