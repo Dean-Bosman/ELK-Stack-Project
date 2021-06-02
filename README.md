@@ -1,9 +1,9 @@
 The files in this repository were used to configure the network depicted below.
 ![Azure_RedTeam_resource_group](https://user-images.githubusercontent.com/77369142/120471172-f671c180-c3d6-11eb-960c-c576ef53a360.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-TODO: Enter the playbook file.
+https://github.com/Dean-Bosman/ELK-Stack-Project.git
 
 This document contains the following details:
 
@@ -20,17 +20,16 @@ How to Use the Ansible Build
 
 Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly Responsive, in addition to restricting overload to the network.
 
 TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 
-TODO: What does Filebeat watch for?
-TODO: What does Metricbeat record?
+Filebeat watches for log files, collects them, and forwards them to Elasticsearch or Logstash.
+Metricbeat records metric data from your system and services. Such as CPU usage, memory etc.
 
 The configuration details of each machine may be found below.
-Note: Use the Markdown Table Generator to add/remove values from the table.
 
 
 
